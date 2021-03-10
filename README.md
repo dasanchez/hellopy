@@ -1,0 +1,2 @@
+# hellopy
+Python exercises

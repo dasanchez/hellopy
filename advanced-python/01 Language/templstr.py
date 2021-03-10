@@ -1,7 +1,5 @@
 # demonstrate template string functions
-
 from string import Template
-
 
 def main():
     # Usual string formatting with format()
@@ -9,20 +7,17 @@ def main():
     print(str1)
     
     # create a template with placeholders
-    templ = Template("You're watching ${title} by ${author}")
+    template1 = Template("You're watching ${title} by ${author}")
     
     # use the substitute method with keyword arguments
-    str2 = templ.substitute(title="Advanced Python", author="Joe Marini")
-    print(str2)
-    
+    print(template1.substitute(title="Advanced Python", author="Joe Marini"))
+       
     # use the substitute method with a dictionary
-    data = { 
-        "author": "Joe Marini",
-        "title": "Advanced Python"
+    data = {
+        "title": "Advanced Python",
+        "author": "Joe Marini"
     }
-    str3 = templ.substitute(data)    
-    print(str3)
-
+    print(template1.substitute(data))
     
 if __name__ == "__main__":
     main()

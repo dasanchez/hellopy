@@ -1,10 +1,8 @@
 # advanced iteration functions in the itertools package
-
 import itertools
 
-
-def testFunction(x):
-    return x < 40
+def prediFunction(x):
+    return x < 10
 
 
 def main():
@@ -21,21 +19,24 @@ def main():
     print(next(count1))
     print(next(count1))
     print(next(count1))
-
+    
     # accumulate creates an iterator that accumulates values
     vals = [10,20,30,40,50,40,30]
-    acc = itertools.accumulate(vals, max)
-    print(list(acc))
-        
+    acc1 = itertools.accumulate(vals, max)
+    print(list(acc1))
+    acc1 = itertools.accumulate(vals)
+    print(next(acc1))
+    print(next(acc1))
+    print(next(acc1))
+ 
     # use chain to connect sequences together
-    x = itertools.chain("ABCD", "1234")
-    print(list(x))
-    
+    chained = itertools.chain('hello ', 'python')
+    print(list(chained))
+
     # dropwhile and takewhile will return values until
     # a certain condition is met that stops them
-    print(list(itertools.dropwhile(testFunction, vals)))
-    print(list(itertools.takewhile(testFunction, vals)))
-    
+    print(list(itertools.dropwhile(prediFunction, [1, 2, 3, 10, 100, 200, 50, 20, 2])))
+    print(list(itertools.takewhile(prediFunction, [1, 2, 3, 10, 100, 200, 50, 20, 2])))
     
 if __name__ == "__main__":
     main()

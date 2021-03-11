@@ -12,12 +12,11 @@ def main():
     print(all(list1))
     
     # min and max will return minimum and maximum values in a sequence
-    print("min: ", min(list1))
-    print("max: ", max(list1))    
+    print(min(list1))
+    print(max(list1))
     
     # Use sum() to sum up all of the values in a sequence
-    print("sum: ", sum(list1))
-    
+    print(sum(list1))
     
 if __name__ == "__main__":
     main()

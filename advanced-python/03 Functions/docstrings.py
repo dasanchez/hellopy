@@ -2,6 +2,12 @@
 
 
 def myFunction(arg1, arg2=None):
+    """myFunction(arg1, arg2=None) --> Demonstrates docstrings
+
+    Parameters:
+    arg1: the first argument.
+    arg2: the second argument. Defaults to None.
+    """
     print(arg1, arg2)
 
 

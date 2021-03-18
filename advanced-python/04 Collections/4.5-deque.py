@@ -3,30 +3,38 @@
 import collections
 import string
 
+def print_letters(deq):
+    for letter in deq:
+        print(letter.upper(), end=" ")
+    print()
 
 def main():
+    
     # initialize a deque with lowercase letters
     d = collections.deque(string.ascii_lowercase)
+    print(d)
 
     # deques support the len() function
-    print("Item count: " + str(len(d)))
+    print(len(d))
 
     # deques can be iterated over
-    for elem in d:
-        print(elem.upper(), end=",")
+    print_letters(d)
 
     # manipulate items from either end
     d.pop()
+    print_letters(d)
     d.popleft()
-    d.append(2)
-    d.appendleft(1)
-    print(d)
+    print_letters(d)
+    d.append('9')
+    print_letters(d)
+    d.appendleft('1')
+    print_letters(d)
 
     # rotate the deque
-    print(d)
-    d.rotate(1)
-    print(d)
-
+    d.rotate(3)
+    print_letters(d)
+    d.rotate(-2)
+    print_letters(d)
 
 if __name__ == "__main__":
     main()

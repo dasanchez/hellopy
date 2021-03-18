@@ -14,24 +14,23 @@ def main():
     sortedTeams = sorted(sportTeams, key=lambda t: t[1][0], reverse=True)
 
     # create an ordered dictionary of the teams
-    teams = OrderedDict(sortedTeams)
-    print(teams)
+    od = OrderedDict(sortedTeams)
+    print(od)
 
     # Use popitem to remove the top item
-    tm, wl = teams.popitem(False)
-    print("Top team: ", tm, wl)
-
+    removed_item = od.popitem(last=False)
+    print(f'With the {removed_item[0]} team gone ({removed_item[1]}), the ordered dict is now:\n{od}')
+    
     # What are next the top 4 teams?
-    for i, team in enumerate(teams, start=1):
-        print(i, team)
-        if i == 4:
+    for index, team in enumerate(od, start=1):
+        print(f'{index}: {team}')
+        if index == 4:
             break
 
     # test for equality
     a = OrderedDict({"a": 1, "b": 2, "c": 3})
     b = OrderedDict({"a": 1, "c": 3, "b": 2})
     print("Equality test: ", a == b)
-
 
 if __name__ == "__main__":
     main()

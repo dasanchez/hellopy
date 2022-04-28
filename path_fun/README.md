@@ -31,6 +31,8 @@ And when we run `python project/calculator/calculator.py` we get the following e
 ModuleNotFoundError: No module named 'addition'
 ```
 
+This can be fixed using one of the following methods.
+
 ## Package Method with __init__.py
 
 Use `calculator` as a module with the following structure:

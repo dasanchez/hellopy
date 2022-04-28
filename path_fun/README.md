@@ -23,7 +23,7 @@ project/
 Inside calculator.py, we want to call `add` and `subtract`. To do this, we use the following imports in `calculator.py`:
 ```python
 from addition import add
-from subtraction import subtraction
+from subtraction import subtract
 ```
 
 And when we run `python project/calculator/calculator.py` we get the following error:

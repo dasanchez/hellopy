@@ -90,7 +90,7 @@ from less.subtraction import subtract
 
 Run `calculator.py`:
 ```
-path_fun$ python -m project_shell_path/calculator/calculator.py
+path_fun$ python project_shell_path/calculator/calculator.py
 10 + 20 = 30
 30 - 15 = 15
 ```
@@ -128,7 +128,7 @@ from less.subtraction import subtract
 
 Run `calculator.py`:
 ```
-path_fun$ python -m project_script_path/calculator/calculator.py
+path_fun$ python project_script_path/calculator/calculator.py
 10 + 20 = 30
 30 - 15 = 15
 ```

@@ -18,7 +18,7 @@ project/
 ```
 
 * `addition.py` implements `add(op1, op2)`
-* `subtraction` implements `subtract(op1, op2)`.
+* `subtraction.py` implements `subtract(op1, op2)`.
 
 Inside calculator.py, we want to call `add` and `subtract`. To do this, we use the following imports in `calculator.py`:
 ```python
